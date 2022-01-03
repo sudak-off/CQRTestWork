@@ -1,0 +1,71 @@
+.header
+	display: flex
+	justify-content: space-between
+	padding: 46px 0
+
+	&__col-left
+		display: flex
+		align-items: center
+		margin-left: 50px
+
+	&__navigation
+		margin-left: 77px
+	&__link
+		font-weight: bolt
+		font-size: 13px
+		line-height: 16px
+		text-transform: uppercase
+		color: #ffffff
+		margin: 0 25px 
+		padding: 14px 19px
+		border-radius: 15px
+		&:hover
+			outline: 2px solid #FFFFFF
+			transition: 0.2s
+	&__icon
+		margin-left: 48px
+
+	&__col-right
+		display: flex
+		align-items: center
+
+	&__form-seach
+		position: relative
+		input
+			width: 340px
+			height: 48px
+			padding: 16px 53px
+			border-radius: 16px
+			color: #F9F0DA
+			background: url(../icons/Search.svg) center left/cover no-repeat
+			background-color: #1D2222
+			background-size: 23px 23px 
+			background-position-x: 15px
+			
+	&__change-lang
+		margin-left: 110px
+		select
+			background-color: rgb(44,47,49)
+			color: #fff
+.logo 
+	
+
+@media (max-width: 1920px )
+	.header
+		&__col-left
+			@include adaptiv-value  ("margin-left", 50, 5, 0)
+			//margin-left: calc(5px + (50 - 5) * ((100vw - 320px) / (1920 - 320)))
+		&__navigation
+			margin-left: calc(5px + (77 - 5) * ((100vw - 320px) / (1920 - 320)))
+		&__link
+			font-size: calc(5px + (13 - 5) * ((100vw - 320px) / (1920 - 320)))
+			line-height: calc(5px + (16 - 5) * ((100vw - 320px) / (1920 - 320)))
+			margin: 0 calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)))
+		&__icon
+			margin-left: calc(5px + (48 - 5) * ((100vw - 320px) / (1920 - 320)))
+		&__change-lang
+			margin-left: calc(5px + (110 - 5) * ((100vw - 320px) / (1920 - 320)))
+	.logo 
+		img
+			width: calc(20px + (79 - 20) * ((100vw - 320px) / (1920 - 320)))
+			
