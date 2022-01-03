@@ -56,7 +56,8 @@
 			@include adaptiv-value  ("margin-left", 50, 5, 0)
 			//margin-left: calc(5px + (50 - 5) * ((100vw - 320px) / (1920 - 320)))
 		&__navigation
-			margin-left: calc(5px + (77 - 5) * ((100vw - 320px) / (1920 - 320)))
+			@include adaptiv-value  ("margin-left", 77, 5, 0)
+			//margin-left: calc(5px + (77 - 5) * ((100vw - 320px) / (1920 - 320)))
 		&__link
 			font-size: calc(5px + (13 - 5) * ((100vw - 320px) / (1920 - 320)))
 			line-height: calc(5px + (16 - 5) * ((100vw - 320px) / (1920 - 320)))
