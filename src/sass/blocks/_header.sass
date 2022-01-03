@@ -1,7 +1,7 @@
 .header
 	display: flex
 	justify-content: space-between
-	padding: 46px 0
+	padding: 46px 0 88px 0
 
 	&__col-left
 		display: flex
@@ -24,6 +24,8 @@
 			transition: 0.2s
 	&__icon
 		margin-left: 48px
+		img
+			vertical-align: middle
 
 	&__col-right
 		display: flex
@@ -50,6 +52,9 @@
 			background-color: rgb(44,47,49)
 			color: #fff
 .logo 
+	img
+		vertical-align: middle
+
 	
 
 @media (max-width: 1920px )
@@ -59,23 +64,27 @@
 		&__navigation
 			@include adaptiv-value  ("margin-left", 77, 5, 0)
 		&__link
-			font-size: calc(5px + (13 - 5) * ((100vw - 320px) / (1920 - 320)))
-			line-height: calc(5px + (16 - 5) * ((100vw - 320px) / (1920 - 320)))
-			margin: 0 calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)))
+			@include adaptiv-value  ("font-size", 13, 5, 0)
+			@include adaptiv-value  ("line-height", 16, 5, 0)
+			@include adaptiv-value  ("margin", 25, 5, 0)
+			@include adaptiv-value  ("padding-left", 19, 5, 0)
+			@include adaptiv-value  ("padding-right", 19, 5, 0)
 		&__icon
 			margin-left: calc(5px + (48 - 5) * ((100vw - 320px) / (1920 - 320)))
 			img
 				width: calc(10px + (35 - 20) * ((100vw - 320px) / (1920 - 320)))
 		&__form-seach
 			input
-				//width: 340px
 				@include adaptiv-value  ("width", 340, 100, 0)
-				//height: 48px
 				@include adaptiv-value  ("height", 48, 20, 0)
-
 		&__change-lang
 			margin-left: calc(5px + (110 - 5) * ((100vw - 320px) / (1920 - 320)))
 	.logo 
 		img
 			width: calc(20px + (79 - 20) * ((100vw - 320px) / (1920 - 320)))
 			
+
+@media (max-width: 620px )
+	.header
+		&__form-seach
+			display: none
